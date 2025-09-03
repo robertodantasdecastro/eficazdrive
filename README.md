@@ -32,6 +32,38 @@ Instalação (sem Play Store)
     - Conceda permissão de captura de tela (MediaProjection) quando solicitado
     - O serviço iniciará e o popup será mostrado quando uma solicitação for detectada
 
+Arquitetura
+
+-   Módulos
+    -   `app`: aplicação Android (Kotlin), minSdk 26, targetSdk 34, Java/Kotlin 17
+-   Camadas principais (pacotes em `dev.eficazdrive.app`)
+    -   `core`
+        -   `CaptureOcrService`: serviço foreground que inicializa notificação, laço de captura (placeholder para MediaProjection) e OCR (ML Kit). Envia texto ao `RuleEngine`.
+        -   `RuleEngine`: carrega configs de `assets/config`, identifica plataforma via markers, extrai campos com regex, avalia fórmulas simples (+ - * /) e dispara `PopupOverlay` com JSON.
+        -   `ServiceStatus`: estado thread‑safe para UI refletir se o serviço está rodando.
+    -   `overlay`
+        -   `PopupOverlay`: cria uma janela de sobreposição com `ViewBinding` para exibir JSON e auto‑fechar após `displayMs`.
+    -   `ui`
+        -   `MainActivity`: solicita permissões (notificações e overlay), inicia/para o serviço e mostra status visual.
+    -   Raiz
+        -   `EficazDriveApp`: classe `Application` para configurações globais.
+-   Recursos e configuração
+    -   Layouts: `activity_main.xml`, `popup_overlay.xml`
+    -   Drawables: `circle_green.xml`, `circle_red.xml`
+    -   Configs: `assets/config/app.json` (popup/display/intervalo), `platform_rules.json` (marcadores/regex), `calculations.json` (fórmulas numéricas)
+-   Dependências principais
+    -   AndroidX AppCompat/Material/ConstraintLayout
+    -   Coroutines
+    -   Google ML Kit Text Recognition (on‑device)
+    -   Jackson (databind + module‑kotlin)
+
+Permissões e requisitos
+
+-   `SYSTEM_ALERT_WINDOW` para overlay
+-   `FOREGROUND_SERVICE` e `FOREGROUND_SERVICE_MEDIA_PROJECTION` para serviço de captura
+-   `POST_NOTIFICATIONS` (Android 13+)
+-   Em tempo de execução, o usuário deve conceder overlay e autorização de captura de tela
+
 Configuração
 
 -   `app/src/main/assets/config/app.json`: tempo de exibição do popup, janela/área de captura
@@ -95,6 +127,31 @@ How it works (summary)
 3. The rule engine identifies the platform and extracts values via regex
 4. Configured formulas are evaluated to compute additional metrics
 5. The overlay popup displays all data in JSON and auto-closes
+
+Architecture
+
+-   Modules
+    -   `app`: Android application (Kotlin), minSdk 26, targetSdk 34, Java/Kotlin 17
+-   Key packages (under `dev.eficazdrive.app`)
+    -   `core`
+        -   `CaptureOcrService`: foreground service with notification, capture loop (MediaProjection TODO placeholder), ML Kit OCR; sends text to `RuleEngine`.
+        -   `RuleEngine`: loads `assets/config`, detects platform via markers, extracts fields with regex, evaluates simple math formulas (+ - * /), triggers `PopupOverlay`.
+        -   `ServiceStatus`: thread‑safe running state for UI.
+    -   `overlay`
+        -   `PopupOverlay`: overlay window using ViewBinding to render JSON, auto‑dismiss after `displayMs`.
+    -   `ui`
+        -   `MainActivity`: requests permissions (notifications, overlay), starts/stops service, shows status.
+    -   Root
+        -   `EficazDriveApp`: `Application` class for global configuration.
+-   Resources & config
+    -   Layouts: `activity_main.xml`, `popup_overlay.xml`
+    -   Drawables: `circle_green.xml`, `circle_red.xml`
+    -   Configs: `assets/config/app.json` (popup/interval), `platform_rules.json` (markers/regex), `calculations.json` (numeric formulas)
+-   Dependencies
+    -   AndroidX AppCompat/Material/ConstraintLayout
+    -   Coroutines
+    -   Google ML Kit Text Recognition (on‑device)
+    -   Jackson (databind + module‑kotlin)
 
 License MIT (see LICENSE)
 

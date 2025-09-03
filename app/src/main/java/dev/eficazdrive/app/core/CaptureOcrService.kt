@@ -22,6 +22,8 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
 
 /**
  * PT-BR: Serviço foreground que captura frames, roda OCR e envia o texto para o motor de regras.
@@ -38,6 +40,7 @@ class CaptureOcrService : Service() {
         super.onCreate()
         startInForeground()
         startLoop()
+        ServiceStatus.setRunning(true)
     }
 
     private fun startInForeground() {
@@ -52,7 +55,15 @@ class CaptureOcrService : Service() {
             .setContentText("Serviço de OCR em execução")
             .setContentIntent(pendingIntent)
             .build()
-        startForeground(2, notification)
+        val serviceType = if (Build.VERSION.SDK_INT >= 34) {
+            // Android 14+ exige tipo de FGS quando envolve MediaProjection
+            android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION
+        } else 0
+        if (Build.VERSION.SDK_INT >= 34) {
+            startForeground(2, notification, serviceType)
+        } else {
+            startForeground(2, notification)
+        }
     }
 
     private fun startLoop() {
@@ -76,14 +87,15 @@ class CaptureOcrService : Service() {
         super.onDestroy()
         job?.cancel()
         projection?.stop()
+        ServiceStatus.setRunning(false)
     }
 }
 
 // Await extension for ML Kit Task
 private suspend fun <T> com.google.android.gms.tasks.Task<T>.await(): T =
     kotlinx.coroutines.suspendCancellableCoroutine { cont ->
-        addOnSuccessListener { cont.resume(it) {} }
-        addOnFailureListener { cont.resumeWithException(it) }
+        addOnSuccessListener { result -> cont.resume(result) }
+        addOnFailureListener { error -> cont.resumeWithException(error) }
     }
 
 

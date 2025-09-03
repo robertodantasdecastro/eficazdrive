@@ -1,12 +1,16 @@
 package dev.eficazdrive.app
 
 import android.app.Application
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.SupervisorJob
 
+/**
+ * PT-BR: Classe Application para configuração global do app.
+ * EN: Application class for global app configuration.
+ */
 class EficazDriveApp : Application() {
-    val appScope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+    override fun onCreate() {
+        super.onCreate()
+        // Inicializações globais podem ser adicionadas aqui quando necessário.
+    }
 }
 
 

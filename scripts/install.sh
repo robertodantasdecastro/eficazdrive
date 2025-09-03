@@ -10,3 +10,5 @@ echo "Installed EficazDrive. Launching..."
 adb shell monkey -p dev.eficazdrive.app 1 >/dev/null 2>&1 || true
 
 
+
+
