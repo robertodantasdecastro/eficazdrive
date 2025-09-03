@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
+    <item android:drawable="@drawable/ic_logo_foreground"/>
+    <item android:width="4dp" android:height="4dp" android:gravity="center">
         <shape android:shape="oval">
-            <size android:width="72dp" android:height="72dp" />
-            <solid android:color="#00E676"/>
-        </shape>
-    </item>
-    <item android:width="48dp" android:height="48dp" android:gravity="center">
-        <shape android:shape="oval">
-            <solid android:color="#0D1B2A"/>
+            <solid android:color="#00000000"/>
         </shape>
     </item>
 </layer-list>
-
-

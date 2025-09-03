@@ -1,5 +1,7 @@
 # EficazDrive
 
+![EficazDrive Logo](app/src/main/res/drawable-nodpi/ic_logo_foreground.png)
+
 PT-BR
 
 EficazDrive é um serviço Android em segundo plano que monitora a tela para identificar solicitações de corridas (Uber/99/Bolt/InDrive/Rappi, etc.), executa OCR on-device (ML Kit), extrai os dados por meio de regras configuráveis por plataforma, calcula métricas (tempo, distância, custos, lucro estimado, etc.) e exibe um popup em overlay com os resultados em JSON. O projeto foi desenhado para ser simples, robusto, eficiente e seguro, priorizando desempenho e baixa latência.
@@ -18,8 +20,10 @@ Instalação (sem Play Store)
 1. Pré-requisitos: Android SDK, adb, Java 17+ e Gradle instalados (ou use os scripts em `scripts/`).
 2. Conecte um dispositivo via USB com depuração habilitada.
 3. Execute:
-    - `bash scripts/build.sh`
-    - `bash scripts/install.sh`
+    - `bash scripts/build.sh` (gera o APK debug)
+    - `bash scripts/install.sh` (instala no dispositivo via ADB)
+    - Para instalar em um serial específico: `adb -s <SERIAL> install -r app/build/outputs/apk/debug/app-debug.apk`
+    - Exemplo: `adb -s 5686add7 install -r app/build/outputs/apk/debug/app-debug.apk`
 4. Abra o app (permissões):
     - Conceda a permissão de sobreposição (draw over other apps)
     - Conceda permissão de captura de tela (MediaProjection) quando solicitado
@@ -63,8 +67,10 @@ Installation (without Play Store)
 1. Prereqs: Android SDK, adb, Java 17+ and Gradle (or use `scripts/`).
 2. Connect a device via USB with debugging enabled.
 3. Run:
-    - `bash scripts/build.sh`
-    - `bash scripts/install.sh`
+    - `bash scripts/build.sh` (build debug APK)
+    - `bash scripts/install.sh` (install via ADB)
+    - To target a specific device: `adb -s <SERIAL> install -r app/build/outputs/apk/debug/app-debug.apk`
+    - Example: `adb -s 5686add7 install -r app/build/outputs/apk/debug/app-debug.apk`
 4. Open the app (permissions):
     - Grant overlay permission (draw over other apps)
     - Grant screen capture (MediaProjection) when prompted

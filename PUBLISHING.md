@@ -18,6 +18,14 @@ git branch -M main
 git push -u origin main
 ```
 
+3. Após alterações (UI, ícone, docs), publique:
+
+```bash
+git add .
+git commit -m "docs(ui,icon): atualiza README/PUBLISHING e ícone"
+git push
+```
+
 EN
 
 1. Initialize the local repo and make the first commit:
@@ -34,4 +42,12 @@ git commit -m "chore: initialize EficazDrive project"
 git remote add origin git@github.com:robertodantasdecastro/eficazdrive.git
 git branch -M main
 git push -u origin main
+```
+
+3. After changes (UI, icon, docs), publish:
+
+```bash
+git add .
+git commit -m "docs(ui,icon): update README/PUBLISHING and icon"
+git push
 ```
