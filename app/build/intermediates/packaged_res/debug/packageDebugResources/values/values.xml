@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EficazDrive</string>
+    <string name="overlay_channel">EficazDrive Overlay</string>
+    <string name="overlay_channel_desc">Notificações do serviço de captura/OCR</string>
+    <style name="Theme.EficazDrive" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+</resources>

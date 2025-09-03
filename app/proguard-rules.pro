@@ -3,3 +3,4 @@
 -keep class com.fasterxml.jackson.** { *; }
 
 
+

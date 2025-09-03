@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "dev.eficazdrive.app-mergeDebugResources-32:/layout/popup_overlay.xml",
+        "source": "dev.eficazdrive.app-main-35:/layout/popup_overlay.xml"
+    },
+    {
+        "merged": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-mergeDebugResources-32:/layout/popup_overlay.xml",
+        "source": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-main-35:/layout/popup_overlay.xml"
+    },
+    {
+        "merged": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-mergeDebugResources-32:/layout/activity_main.xml",
+        "source": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-main-35:/layout/activity_main.xml"
+    }
+]

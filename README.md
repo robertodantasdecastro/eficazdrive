@@ -39,7 +39,7 @@ Arquitetura
 -   Camadas principais (pacotes em `dev.eficazdrive.app`)
     -   `core`
         -   `CaptureOcrService`: serviço foreground que inicializa notificação, laço de captura (placeholder para MediaProjection) e OCR (ML Kit). Envia texto ao `RuleEngine`.
-        -   `RuleEngine`: carrega configs de `assets/config`, identifica plataforma via markers, extrai campos com regex, avalia fórmulas simples (+ - * /) e dispara `PopupOverlay` com JSON.
+        -   `RuleEngine`: carrega configs de `assets/config`, identifica plataforma via markers, extrai campos com regex, avalia fórmulas simples (+ - \* /) e dispara `PopupOverlay` com JSON.
         -   `ServiceStatus`: estado thread‑safe para UI refletir se o serviço está rodando.
     -   `overlay`
         -   `PopupOverlay`: cria uma janela de sobreposição com `ViewBinding` para exibir JSON e auto‑fechar após `displayMs`.
@@ -135,7 +135,7 @@ Architecture
 -   Key packages (under `dev.eficazdrive.app`)
     -   `core`
         -   `CaptureOcrService`: foreground service with notification, capture loop (MediaProjection TODO placeholder), ML Kit OCR; sends text to `RuleEngine`.
-        -   `RuleEngine`: loads `assets/config`, detects platform via markers, extracts fields with regex, evaluates simple math formulas (+ - * /), triggers `PopupOverlay`.
+        -   `RuleEngine`: loads `assets/config`, detects platform via markers, extracts fields with regex, evaluates simple math formulas (+ - \* /), triggers `PopupOverlay`.
         -   `ServiceStatus`: thread‑safe running state for UI.
     -   `overlay`
         -   `PopupOverlay`: overlay window using ViewBinding to render JSON, auto‑dismiss after `displayMs`.

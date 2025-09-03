@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "dev.eficazdrive.app-mergeDebugResources-31:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/roberto/.gradle/caches/8.8/transforms/e5e98f74fcb7f5fc3c3c177b10a650c2/transformed/appcompat-1.7.0/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

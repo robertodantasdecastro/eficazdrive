@@ -1,0 +1,18 @@
+R_DEF: Internal format may change without notice
+local
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ic_logo_foreground
+id closeButton
+id jsonText
+id startButton
+id statusText
+id stopButton
+layout activity_main
+layout popup_overlay
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string overlay_channel
+string overlay_channel_desc
+style Theme.EficazDrive

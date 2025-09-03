@@ -1,0 +1,10 @@
+{
+  "popup_display_ms": 4000,
+  "capture_interval_ms": 600,
+  "capture_area": {
+    "x": 0, "y": 0, "width": -1, "height": -1
+  }
+}
+
+
+

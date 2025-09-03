@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/statusText"
+        android:text="Serviço parado"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/startButton"
+            android:text="Iniciar serviço"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:text="Parar serviço"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="24dp"
+        android:text="Dicas: habilite sobreposição e captura de tela quando solicitado."
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

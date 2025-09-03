@@ -1,0 +1,11 @@
+{
+  "formulas": {
+    "total_km": "(pickup_km + drop_km) | total_km",
+    "total_minutes": "(pickup_minutes + drop_minutes) | total_minutes",
+    "cost_per_km": "price / total_km",
+    "eta_minutes": "total_minutes"
+  }
+}
+
+
+

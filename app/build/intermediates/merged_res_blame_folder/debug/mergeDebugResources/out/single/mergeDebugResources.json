@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "dev.eficazdrive.app-debug-33:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "dev.eficazdrive.app-main-35:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-debug-33:/layout_popup_overlay.xml.flat",
+        "source": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-main-35:/layout/popup_overlay.xml"
+    },
+    {
+        "merged": "dev.eficazdrive.app-debug-33:/drawable_ic_launcher_background.xml.flat",
+        "source": "dev.eficazdrive.app-main-35:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "dev.eficazdrive.app-debug-33:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "dev.eficazdrive.app-main-35:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-debug-33:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-main-35:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "dev.eficazdrive.app-debug-33:/layout_popup_overlay.xml.flat",
+        "source": "dev.eficazdrive.app-main-35:/layout/popup_overlay.xml"
+    },
+    {
+        "merged": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-debug-33:/layout_activity_main.xml.flat",
+        "source": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-main-35:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-debug-33:/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-main-35:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-debug-33:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-main-35:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-debug-33:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-main-35:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-debug-33:/drawable-nodpi_ic_logo_foreground.png.flat",
+        "source": "/Users/roberto/.gradle/daemon/8.8/dev.eficazdrive.app-main-35:/drawable-nodpi/ic_logo_foreground.png"
+    }
+]
