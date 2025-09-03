@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EficazDrive</string>
+    <string name="overlay_channel">EficazDrive Overlay</string>
+    <string name="overlay_channel_desc">Notificações do serviço de captura/OCR</string>
+</resources>
+
+

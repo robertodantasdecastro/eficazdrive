@@ -1,0 +1,40 @@
+[
+  {
+    "id": "uber",
+    "markers": ["Uber", "Uber Driver"],
+    "fields": {
+      "price": "(?:R\$|BRL|USD)\s*([0-9.,]+)",
+      "pickup_minutes": "(\d{1,2})\s*min\s*pickup",
+      "drop_minutes": "(\d{1,2})\s*min\s*drop",
+      "pickup_km": "([0-9.,]+)\s*km\s*pickup",
+      "drop_km": "([0-9.,]+)\s*km\s*drop"
+    }
+  },
+  {
+    "id": "app99",
+    "markers": ["99", "App 99"],
+    "fields": {
+      "price": "(?:R\$|BRL)\s*([0-9.,]+)",
+      "total_minutes": "(?:~\s*)?(\d{1,3})\s*min",
+      "total_km": "(?:~\s*)?([0-9.,]+)\s*km"
+    }
+  },
+  {
+    "id": "indrive",
+    "markers": ["inDrive", "InDrive"],
+    "fields": {
+      "price": "(?:R\$|BRL)\s*([0-9.,]+)",
+      "total_km": "([0-9.,]+)\s*km"
+    }
+  },
+  {
+    "id": "bolt",
+    "markers": ["Bolt"],
+    "fields": {
+      "price": "(?:R\$|BRL)\s*([0-9.,]+)",
+      "total_minutes": "(\d{1,3})\s*min"
+    }
+  }
+]
+
+
