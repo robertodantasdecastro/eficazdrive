@@ -3,5 +3,3 @@
     <data />
     <include layout="@layout/popup_overlay" />
 </layout>
-
-
