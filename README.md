@@ -24,6 +24,9 @@ Instalação (sem Play Store)
     - `bash scripts/install.sh` (instala no dispositivo via ADB)
     - Para instalar em um serial específico: `adb -s <SERIAL> install -r app/build/outputs/apk/debug/app-debug.apk`
     - Exemplo: `adb -s 5686add7 install -r app/build/outputs/apk/debug/app-debug.apk`
+    - Alternativa: enviar o APK ao armazenamento do dispositivo (USB/ADB) e instalar manualmente:
+        - `adb -s 5686add7 push dist/eficazdrive-debug.apk /sdcard/Download/`
+        - No aparelho, abra o arquivo em Download e confirme a instalação
 4. Abra o app (permissões):
     - Conceda a permissão de sobreposição (draw over other apps)
     - Conceda permissão de captura de tela (MediaProjection) quando solicitado
@@ -71,6 +74,9 @@ Installation (without Play Store)
     - `bash scripts/install.sh` (install via ADB)
     - To target a specific device: `adb -s <SERIAL> install -r app/build/outputs/apk/debug/app-debug.apk`
     - Example: `adb -s 5686add7 install -r app/build/outputs/apk/debug/app-debug.apk`
+    - Alternative: push APK to device storage (USB/ADB) and install manually:
+        - `adb -s 5686add7 push dist/eficazdrive-debug.apk /sdcard/Download/`
+        - On the device, open the file from Downloads and confirm installation
 4. Open the app (permissions):
     - Grant overlay permission (draw over other apps)
     - Grant screen capture (MediaProjection) when prompted
